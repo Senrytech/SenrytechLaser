@@ -1150,253 +1150,216 @@
 
     <!-- 多语言数据 -->
     <script>
-        const translations = {
-            en: {
-                // 导航
-                "nav.home": "Home",
-                "nav.products": "Products",
-                "nav.cutting": "Laser Cutting Machines",
-                "nav.welding": "Laser Welding Machines",
-                "nav.marking": "Laser Marking Machines",
-                "nav.solutions": "Solutions",
-                "nav.about": "About Us",
-                "nav.cases": "Cases",
-                "nav.contact": "Contact",
-                
-                // 语言选择
-                "lang.select": "Select Language:",
-                
-                // Banner
-                "banner.title": "Senrytech - Professional Laser Equipment Manufacturer",
-                "banner.subtitle": "High Precision · High Stability · 24/7 Industrial Solutions",
-                "banner.cta1": "View Core Products",
-                "banner.cta2": "Get Quotation",
-                "banner.title2": "15 Years of Laser Technology",
-                "banner.subtitle2": "From design to production, from installation to after-sales, we provide comprehensive laser processing solutions",
-                "banner.cta3": "Explore Solutions",
-                "banner.cta4": "View Success Cases",
-                
-                // 核心优势
-                "advantages.title": "Our Core Advantages",
-                "advantages.subtitle": "15 years focused on R&D and manufacturing of laser equipment, we have won global customers' trust with technological innovation and quality service",
-                "advantages.tech.title": "Technical Strength",
-                "advantages.tech.desc": "15 years of R&D experience, 100+ technical patents, with a professional R&D team and advanced laboratories",
-                "advantages.service.title": "Product Guarantee",
-                "advantages.service.desc": "24-hour after-sales response, 3-year warranty on core components, 50+ global service outlets",
-                "advantages.value.title": "Customer Value",
-                "advantages.value.desc": "Helping 500+ factories improve production efficiency by 40% and reduce operating costs by 25%",
-                
-                // 产品展示
-                "products.title": "Core Laser Equipment Series",
-                "products.subtitle": "Covering cutting, welding and marking scenarios, providing customized laser processing equipment for different industries",
-                "products.all": "All Products",
-                "products.cutting": "Cutting Machines",
-                "products.welding": "Welding Machines",
-                "products.marking": "Marking Machines",
-                "products.bestseller": "Bestseller",
-                "products.new": "New Arrival",
-                "products.cutting1.desc": "Suitable for stainless steel, aluminum and other materials, cutting thickness up to 30mm, high precision cutting with excellent efficiency",
-                "products.cutting2.desc": "Professional pipe cutting equipment, supporting cutting of round and square pipes with diameter ≤160mm, precision up to ±0.1mm",
-                "products.welding1.desc": "Suitable for welding stainless steel, aluminum alloy and other materials, with beautiful welds, small heat-affected zone and high welding efficiency",
-                "products.welding2.desc": "Fully automatic welding solution with robotic arm, suitable for mass production, welding speed increased by 300%",
-                "products.marking1.desc": "High-precision marking equipment, suitable for metal, plastic and other materials, with clear and durable marking, easy to operate",
-                "products.marking2.desc": "Suitable for marking non-metallic materials such as wood, leather, plastic, with clear marking and fast speed",
-                "products.price": "Price:",
-                "products.details": "View Details",
-                "products.viewAll": "View All Products",
-                
-                // 关于我们
-                "about.title": "About Senrytech",
-                "about.p1": "Founded in 2008, Senrytech is a high-tech enterprise specializing in R&D, production and sales of laser equipment. Over the past 15 years, we have always adhered to technological innovation as the core and customer demand as the guide, providing high-quality laser processing solutions for global customers.",
-                "about.point1": "Established in 2008, focusing on laser equipment R&D and manufacturing for 15 years",
-                "about.point2": "20,000㎡ modern production base with annual capacity of 1000+ units",
-                "about.point3": "Possessing 100+ technical patents, certified by ISO9001, CE, FCC and other international certifications",
-                "about.point4": "Products exported to 50+ countries and regions, serving 500+ well-known enterprises",
-                "about.cta": "Learn More",
-                
-                // 客户案例
-                "cases.title": "Customer Cases",
-                "cases.subtitle": "From metal processing to aerospace, our laser equipment has been widely used in multiple industries, creating significant value for customers",
-                "cases.case1.title": "XX Auto Parts Factory",
-                "cases.case1.desc": "Provided 20000w high-power laser cutting solution for customers, replacing traditional processing methods, production efficiency increased by 40%, material utilization rate increased by 15%, annual cost savings exceeded 2 million yuan.",
-                "cases.case2.title": "XX Electronics Factory",
-                "cases.case2.desc": "Provided fully automatic laser welding production line for precision electronic component welding, welding quality significantly improved, defect rate reduced from 3% to 0.5%, production efficiency increased by 200%.",
-                "cases.case3.title": "XX Medical Device Company",
-                "cases.case3.desc": "Provided high-precision laser marking system for medical device surface marking, with clear and durable marking, meeting FDA certification requirements and strict quality standards of the medical industry.",
-                "cases.industry.auto": "Automotive Industry",
-                "cases.industry.electronic": "Electronics Industry",
-                "cases.industry.medical": "Medical Industry",
-                "cases.efficiency": "Efficiency +40%",
-                "cases.quality": "Quality Improved",
-                "cases.testimonials": "Customer Testimonials",
-                "cases.test1.name": "Manager Zhang",
-                "cases.test1.title": "Purchasing Director, Metal Processing Plant",
-                "cases.test1.content": "Senrytech's laser cutting equipment operates stably with high cutting precision, which has greatly improved our production efficiency. Their after-sales service responds quickly and solves problems professionally and efficiently.",
-                "cases.test3.name": "Chief Engineer Li",
-                "cases.test3.title": "Aerospace Manufacturing Enterprise",
-                "cases.test3.content": "The performance of the equipment exceeded our expectations, especially in the processing of complex parts. Senrytech's engineers provided professional installation, commissioning and training services, allowing our employees to get started quickly.",
-                
-                // 解决方案
-                "solutions.title": "Industry Solutions",
-                "solutions.subtitle": "Providing customized laser processing solutions for special needs of different industries to help enterprises enhance competitiveness",
-                "solutions.auto.title": "Automotive Manufacturing",
-                "solutions.auto.desc": "Cutting, welding and marking solutions for auto parts, improving production efficiency and quality stability",
-                "solutions.electronic.title": "Electronics & Electrical",
-                "solutions.electronic.desc": "Laser welding and marking solutions for precision electronic components, meeting high precision and reliability requirements",
-                "solutions.medical.title": "Medical Devices",
-                "solutions.medical.desc": "Laser processing solutions that meet medical industry standards, ensuring product quality and safety",
-                "solutions.aerospace.title": "Aerospace",
-                "solutions.aerospace.desc": "Precision laser processing solutions for high-strength materials, meeting strict standards of aerospace industry",
-                "solutions.learnMore": "Learn More",
-                
-                // CTA区域
-                "cta.title": "Want to know which equipment is suitable for your factory?",
-                "cta.subtitle": "We provide free on-site survey and customized solutions to help you choose the most suitable laser equipment",
-                "cta.cta1": "Get Free Selection Plan",
-                "cta.cta2": "Call Hotline: 400-XXX-XXXX",
-                
-                // 博客
-                "blog.title": "Laser Industry News & Technical Insights",
-                "blog.subtitle": "Learn about the latest laser technology trends, application cases and equipment maintenance knowledge",
-                "blog.viewMore": "View More",
-                "blog.category.maintenance": "Equipment Maintenance",
-                "blog.category.trend": "Industry Trends",
-                "blog.category.application": "Application Cases",
-                "blog.post1.title": "《3 Steps for Daily Maintenance of Laser Cutting Machines》",
-                "blog.post1.excerpt": "Regular maintenance can effectively extend the service life of laser cutting machines and reduce failure rates. This article introduces three simple and effective daily maintenance steps to help you keep your equipment in optimal condition.",
-                "blog.post2.title": "《2024 Laser Cutting Industry Trend: Will High-Power Equipment Become Mainstream?》",
-                "blog.post2.excerpt": "With the increasing demand for efficiency in manufacturing, high-power laser cutting equipment has attracted more and more attention. This article analyzes the advantages and application scenarios of high-power laser cutting machines and discusses their future development trends.",
-                "blog.post3.title": "《Application of Laser Welding in New Energy Vehicle Battery Production》",
-                "blog.post3.excerpt": "New energy vehicle battery production has extremely high requirements for welding quality, and laser welding has become an ideal choice with its unique advantages. This article introduces the application of laser welding in the processing of battery tabs, shells and other components.",
-                "blog.readMore": "Read More",
-                
-                // 联系我们
-                "contact.title": "Contact Us",
-                "contact.subtitle": "No matter what questions or needs you have, our professional team will provide you with timely and professional services",
-                "contact.addressTitle": "Company Address",
-                "contact.address": "No. 15612 Century Avenue, High-tech Zone, Jinan, Shandong",
-                "contact.phoneTitle": "Phone Number",
-                "contact.phone": "400-XXX-XXXX",
-                "contact.phoneDesc": "Working Days 9:00-18:00",
-                "contact.emailTitle": "Email Address",
-                "contact.followUs": "Follow Us",
-                "contact.formTitle": "Send Inquiry",
-                "contact.name": "Name",
-                "contact.company": "Company Name",
-                "contact.interest": "Interested Product",
-                "contact.selectProduct": "Please select product",
-                "contact.cuttingMachine": "Laser Cutting Machine",
-                "contact.weldingMachine": "Laser Welding Machine",
-                "contact.markingMachine": "Laser Marking Machine",
-                "contact.other": "Other",
-                "contact.message": "Message Content",
-                "contact.messagePlaceholder": "Please describe your needs or questions...",
-                "contact.submit": "Submit Inquiry",
-                
-                // 页脚
-                "footer.quickLinks": "Quick Links",
-                "footer.home": "Home",
-                "footer.products": "Products",
-                "footer.solutions": "Solutions",
-                "footer.about": "About Us",
-                "footer.cases": "Cases",
-                "footer.blog": "Industry News",
-                "footer.contact": "Contact",
-                "footer.contactInfo": "Contact Information",
-                "footer.workHours": "Working Days 9:00-18:00",
-                "footer.certifications": "Certifications",
-                "footer.businessLicense": "Business License",
-                "footer.ISO": "ISO9001 Certification",
-                "footer.CE": "CE Certification",
-                "footer.FCC": "FCC Certification",
-                "footer.privacyPolicy": "Privacy Policy",
-                "footer.terms": "Service Terms",
-                "footer.socialMedia": "Follow Us",
-                "footer.wechat": "WeChat Official Account",
-                "footer.douyin": "Douyin Account",
-                "footer.copyright": "©2024 Senrytech All Rights Reserved | Lu ICP Bei XXXXXXXX"
-            },
-            es: {
-                // 导航
-                "nav.home": "Inicio",
-                "nav.products": "Productos",
-                "nav.cutting": "Máquinas de corte láser",
-                "nav.welding": "Máquinas de soldadura láser",
-                "nav.marking": "Máquinas de marcado láser",
-                "nav.solutions": "Soluciones",
-                "nav.about": "Sobre nosotros",
-                "nav.cases": "Casos",
-                "nav.contact": "Contacto",
-                
-                // 语言选择
-                "lang.select": "Seleccionar idioma:",
-                
-                // Banner
-                "banner.title": "Senrytech - Fabricante profesional de equipos láser",
-                "banner.subtitle": "Alta precisión · Alta estabilidad · Soluciones industriales 24/7",
-                "banner.cta1": "Ver productos core",
-                "banner.cta2": "Obtener cotización",
-                "banner.title2": "15 años de tecnología láser",
-                "banner.subtitle2": "Desde el diseño hasta la producción, desde la instalación hasta el postventa, ofrecemos soluciones completas de procesamiento láser",
-                "banner.cta3": "Explorar soluciones",
-                "banner.cta4": "Ver casos de éxito",
-                
-                // 核心优势
-                "advantages.title": "Nuestras ventajas core",
-                "advantages.subtitle": "15 años专注于研发和制造设备激光， hemos ganado la confianza de clientes globales con innovación tecnológica y servicio de calidad",
-                "advantages.tech.title": "Fortaleza técnica",
-                "advantages.tech.desc": "15 años de experiencia en I+D, más de 100 patentes técnicas, con un equipo profesional de I+D y laboratorios avanzados",
-                "advantages.service.title": "Garantía del producto",
-                "advantages.service.desc": "Respuesta postventa 24 horas, garantía de 3 años en componentes core, más de 50 puntos de servicio globales",
-                "advantages.value.title": "Valor para el cliente",
-                "advantages.value.desc": "Ayudando a más de 500 fábricas a mejorar la eficiencia de producción en un 40% y reducir costos operativos en un 25%",
-                
-                // 产品展示
-                "products.title": "Series de equipos láser core",
-                "products.subtitle": "Cubriendo escenarios de corte, soldadura y marcado, proporcionando equipos de procesamiento láser personalizados para diferentes industrias",
-                "products.all": "Todos los productos",
-                "products.cutting": "Máquinas de corte",
-                "products.welding": "Máquinas de soldadura",
-                "products.marking": "Máquinas de marcado",
-                "products.bestseller": "Más vendido",
-                "products.new": "Nuevo",
-                "products.cutting1.desc": "Suitable para acero inoxidable, aluminio y otros materiales, espesor de corte hasta 30mm, corte de alta precisión con excelente eficiencia",
-                "products.cutting2.desc": "Equipo profesional de corte de tubos, compatible con corte de tubos redondos y cuadrados con diámetro ≤160mm, precisión hasta ±0.1mm",
-                "products.welding1.desc": "Suitable para soldadura de acero inoxidable, aleación de aluminio y otros materiales, con soldaduras hermosas, pequeña zona afectada por el calor y alta eficiencia de soldadura",
-                "products.welding2.desc": "Solución de soldadura totalmente automática con brazo robótico, suitable para producción en masa, velocidad de soldadura aumentada en un 300%",
-                "products.marking1.desc": "Equipo de marcado de alta precisión, suitable para metal, plástico y otros materiales, con marcado claro y duradero, fácil de operar",
-                "products.marking2.desc": "Suitable para marcado de materiales no metálicos como madera, cuero, plástico, con marcado claro y velocidad rápida",
-                "products.price": "Precio:",
-                "products.details": "Ver detalles",
-                "products.viewAll": "Ver todos los productos",
-                
-                // 关于我们
-                "about.title": "Sobre Senrytech",
-                "about.p1": "Fundada en 2008, Senrytech es una empresa de alta tecnología especializada en I+D, producción y venta de equipos láser. En los últimos 15 años, siempre hemos adherido a la innovación tecnológica como núcleo y la demanda del cliente como guía, proporcionando soluciones de procesamiento láser de alta calidad para clientes globales.",
-                "about.point1": "Fundada en 2008, centrándose en I+D y fabricación de equipos láser durante 15 años",
-                "about.point2": "Base de producción moderna de 20.000㎡, con capacidad anual de más de 1000 unidades",
-                "about.point3": "Poseyendo más de 100 patentes técnicas, certificada por ISO9001, CE, FCC y otras certificaciones internacionales",
-                "about.point4": "Productos exportados a más de 50 países y regiones, sirviendo a más de 500 empresas reconocidas",
-                "about.cta": "Saber más",
-                
-                // 客户案例
-                "cases.title": "Casos de clientes",
-                "cases.subtitle": "Desde el procesamiento de metales hasta la aeronáutica y el espacio, nuestros equipos láser se han utilizado ampliamente en múltiples industrias, creando un valor significativo para los clientes",
-                "cases.case1.title": "Fábrica de piezas de automoción XX",
-                "cases.case1.desc": "Proporcionamos una solución de corte láser de alta potencia de 20000w para clientes, reemplazando métodos de procesamiento tradicionales, la eficiencia de producción aumentó un 40%, la tasa de utilización de materiales aumentó un 15%, el ahorro anual de costos superó los 2 millones de yuanes.",
-                "cases.case2.title": "Fábrica de electrónica XX",
-                "cases.case2.desc": "Proporcionamos una línea de producción de soldadura láser totalmente automática para soldadura de componentes electrónicos de precisión, la calidad de soldadura mejoró significativamente, la tasa de defectos se redujo del 3% al 0.5%, la eficiencia de producción aumentó un 200%.",
-                "cases.case3.title": "Empresa de dispositivos médicos XX",
-                "cases.case3.desc": "Proporcionamos un sistema de marcado láser de alta precisión para marcado de superficie de dispositivos médicos, con marcado claro y duradero, cumpliendo con los requisitos de certificación FDA y estrictos estándares de calidad de la industria médica.",
-                "cases.industry.auto": "Industria automotriz",
-                "cases.industry.electronic": "Industria electrónica",
-                "cases.industry.medical": "Industria médica",
-                "cases.efficiency": "Eficiencia +40%",
-                "cases.quality": "Calidad mejorada",
-                "cases.testimonials": "Testimonios de clientes",
-                "cases.test1.name": "Gerente</script></body></html>
-                
-    // 多语言切换功能实现
+const translations = {
+    en: {
+        // 导航
+        "nav.home": "Home",
+        "nav.products": "Products",
+        "nav.cutting": "Laser Cutting Machines",
+        "nav.welding": "Laser Welding Machines",
+        "nav.marking": "Laser Marking Machines",
+        "nav.solutions": "Solutions",
+        "nav.about": "About Us",
+        "nav.cases": "Cases",
+        "nav.contact": "Contact",
+        
+        // 语言选择
+        "lang.select": "Select Language:",
+        
+        // Banner
+        "banner.title": "Senrytech - Professional Laser Equipment Manufacturer",
+        "banner.subtitle": "High Precision · High Stability · 24/7 Industrial Solutions",
+        "banner.cta1": "View Core Products",
+        "banner.cta2": "Get Quotation",
+        "banner.title2": "15 Years of Laser Technology",
+        "banner.subtitle2": "From design to production, from installation to after-sales, we provide comprehensive laser processing solutions",
+        "banner.cta3": "Explore Solutions",
+        "banner.cta4": "View Success Cases",
+        
+        // 核心优势
+        "advantages.title": "Our Core Advantages",
+        "advantages.subtitle": "15 years focused on R&D and manufacturing of laser equipment, we have won global customers' trust with technological innovation and quality service",
+        "advantages.tech.title": "Technical Strength",
+        "advantages.tech.desc": "15 years of R&D experience, 100+ technical patents, with a professional R&D team and advanced laboratories",
+        "advantages.service.title": "Product Guarantee",
+        "advantages.service.desc": "24-hour after-sales response, 3-year warranty on core components, 50+ global service outlets",
+        "advantages.value.title": "Customer Value",
+        "advantages.value.desc": "Helping 500+ factories improve production efficiency by 40% and reduce operating costs by 25%",
+        
+        // 产品展示
+        "products.title": "Core Laser Equipment Series",
+        "products.subtitle": "Covering cutting, welding and marking scenarios, providing customized laser processing equipment for different industries",
+        "products.all": "All Products",
+        "products.cutting": "Cutting Machines",
+        "products.welding": "Welding Machines",
+        "products.marking": "Marking Machines",
+        "products.bestseller": "Bestseller",
+        "products.new": "New Arrival",
+        "products.cutting1.desc": "Suitable for stainless steel, aluminum and other materials, cutting thickness up to 30mm, high precision cutting with excellent efficiency",
+        "products.cutting2.desc": "Professional pipe cutting equipment, supporting cutting of round and square pipes with diameter ≤160mm, precision up to ±0.1mm",
+        "products.welding1.desc": "Suitable for welding stainless steel, aluminum alloy and other materials, with beautiful welds, small heat-affected zone and high welding efficiency",
+        "products.welding2.desc": "Fully automatic welding solution with robotic arm, suitable for mass production, welding speed increased by 300%",
+        "products.marking1.desc": "High-precision marking equipment, suitable for metal, plastic and other materials, with clear and durable marking, easy to operate",
+        "products.marking2.desc": "Suitable for marking non-metallic materials such as wood, leather, plastic, with clear marking and fast speed",
+        "products.price": "Price:",
+        "products.details": "View Details",
+        "products.viewAll": "View All Products",
+        
+        // 关于我们
+        "about.title": "About Senrytech",
+        "about.p1": "Founded in 2008, Senrytech is a high-tech enterprise specializing in R&D, production and sales of laser equipment. Over the past 15 years, we have always adhered to technological innovation as the core and customer demand as the guide, providing high-quality laser processing solutions for global customers.",
+        "about.point1": "Established in 2008, focusing on laser equipment R&D and manufacturing for 15 years",
+        "about.point2": "20,000㎡ modern production base with annual capacity of 1000+ units",
+        "about.point3": "Possessing 100+ technical patents, certified by ISO9001, CE, FCC and other international certifications",
+        "about.point4": "Products exported to 50+ countries and regions, serving 500+ well-known enterprises",
+        "about.cta": "Learn More",
+        
+        // 客户案例
+        "cases.title": "Customer Cases",
+        "cases.subtitle": "From metal processing to aerospace, our laser equipment has been widely used in multiple industries, creating significant value for customers",
+        "cases.case1.title": "XX Auto Parts Factory",
+        "cases.case1.desc": "Provided 20000w high-power laser cutting solution for customers, replacing traditional processing methods, production efficiency increased by 40%, material utilization rate increased by 15%, annual cost savings exceeded 2 million yuan.",
+        "cases.case2.title": "XX Electronics Factory",
+        "cases.case2.desc": "Provided fully automatic laser welding production line for precision electronic component welding, welding quality significantly improved, defect rate reduced from 3% to 0.5%, production efficiency increased by 200%.",
+        "cases.case3.title": "XX Medical Device Company",
+        "cases.case3.desc": "Provided high-precision laser marking system for medical device surface marking, with clear and durable marking, meeting FDA certification requirements and strict quality standards of the medical industry.",
+        "cases.industry.auto": "Automotive Industry",
+        "cases.industry.electronic": "Electronics Industry",
+        "cases.industry.medical": "Medical Industry",
+        "cases.efficiency": "Efficiency +40%",
+        "cases.quality": "Quality Improved",
+        "cases.testimonials": "Customer Testimonials",
+        "cases.test1.name": "Manager Zhang",
+        "cases.test1.title": "Purchasing Director, Metal Processing Plant",
+        "cases.test1.content": "Senrytech's laser cutting equipment operates stably with high cutting precision, which has greatly improved our production efficiency. Their after-sales service responds quickly and solves problems professionally and efficiently.",
+        "cases.test3.name": "Chief Engineer Li",
+        "cases.test3.title": "Aerospace Manufacturing Enterprise",
+        "cases.test3.content": "The performance of the equipment exceeded our expectations, especially in the processing of complex parts. Senrytech's engineers provided professional installation, commissioning and training services, allowing our employees to get started quickly.",
+        
+        // 解决方案
+        "solutions.title": "Industry Solutions",
+        "solutions.subtitle": "Providing customized laser processing solutions for special needs of different industries to help enterprises enhance competitiveness",
+        "solutions.auto.title": "Automotive Manufacturing",
+        "solutions.auto.desc": "Cutting, welding and marking solutions for auto parts, improving production efficiency and quality stability",
+        "solutions.electronic.title": "Electronics & Electrical",
+        "solutions.electronic.desc": "Laser welding and marking solutions for precision electronic components, meeting high precision and reliability requirements",
+        "solutions.medical.title": "Medical Devices",
+        "solutions.medical.desc": "Laser processing solutions that meet medical industry standards, ensuring product quality and safety",
+        "solutions.aerospace.title": "Aerospace",
+        "solutions.aerospace.desc": "Precision laser processing solutions for high-strength materials, meeting strict standards of aerospace industry",
+        "solutions.learnMore": "Learn More",
+        
+        // CTA区域
+        "cta.title": "Want to know which equipment is suitable for your factory?",
+        "cta.subtitle": "We provide free on-site survey and customized solutions to help you choose the most suitable laser equipment",
+        "cta.cta1": "Get Free Selection Plan",
+        "cta.cta2": "Call Hotline: 400-XXX-XXXX",
+        
+        // 博客
+        "blog.title": "Laser Industry News & Technical Insights",
+        "blog.subtitle": "Learn about the latest laser technology trends, application cases and equipment maintenance knowledge",
+        "blog.viewMore": "View More",
+        "blog.category.maintenance": "Equipment Maintenance",
+        "blog.category.trend": "Industry Trends",
+        "blog.category.application": "Application Cases",
+        "blog.post1.title": "《3 Steps for Daily Maintenance of Laser Cutting Machines》",
+        "blog.post1.excerpt": "Regular maintenance can effectively extend the service life of laser cutting machines and reduce failure rates. This article introduces three simple and effective daily maintenance steps to help you keep your equipment in optimal condition.",
+        "blog.post2.title": "《2024 Laser Cutting Industry Trend: Will High-Power Equipment Become Mainstream?》",
+        "blog.post2.excerpt": "With the increasing demand for efficiency in manufacturing, high-power laser cutting equipment has attracted more and more attention. This article analyzes the advantages and application scenarios of high-power laser cutting machines and discusses their future development trends.",
+        "blog.post3.title": "《Application of Laser Welding in New Energy Vehicle Battery Production》",
+        "blog.post3.excerpt": "New energy vehicle battery production has extremely high requirements for welding quality, and laser welding has become an ideal choice with its unique advantages. This article introduces the application of laser welding in the processing of battery tabs, shells and other components.",
+        "blog.readMore": "Read More",
+        
+        // 联系我们
+        "contact.title": "Contact Us",
+        "contact.subtitle": "No matter what questions or needs you have, our professional team will provide you with timely and professional services",
+        "contact.addressTitle": "Company Address",
+        "contact.address": "No. 15612 Century Avenue, High-tech Zone, Jinan, Shandong",
+        "contact.phoneTitle": "Phone Number",
+        "contact.phone": "400-XXX-XXXX",
+        "contact.phoneDesc": "Working Days 9:00-18:00",
+        "contact.emailTitle": "Email Address",
+        "contact.followUs": "Follow Us",
+        "contact.formTitle": "Send Inquiry",
+        "contact.name": "Name",
+        "contact.company": "Company Name",
+        "contact.interest": "Interested Product",
+        "contact.selectProduct": "Please select product",
+        "contact.cuttingMachine": "Laser Cutting Machine",
+        "contact.weldingMachine": "Laser Welding Machine",
+        "contact.markingMachine": "Laser Marking Machine",
+        "contact.other": "Other",
+        "contact.message": "Message Content",
+        "contact.messagePlaceholder": "Please describe your needs or questions...",
+        "contact.submit": "Submit Inquiry",
+        
+        // 页脚
+        "footer.quickLinks": "Quick Links",
+        "footer.home": "Home",
+        "footer.products": "Products",
+        "footer.solutions": "Solutions",
+        "footer.about": "About Us",
+        "footer.cases": "Cases",
+        "footer.blog": "Industry News",
+        "footer.contact": "Contact",
+        "footer.contactInfo": "Contact Information",
+        "footer.workHours": "Working Days 9:00-18:00",
+        "footer.certifications": "Certifications",
+        "footer.businessLicense": "Business License",
+        "footer.ISO": "ISO9001 Certification",
+        "footer.CE": "CE Certification",
+        "footer.FCC": "FCC Certification",
+        "footer.privacyPolicy": "Privacy Policy",
+        "footer.terms": "Service Terms",
+        "footer.socialMedia": "Follow Us",
+        "footer.wechat": "WeChat Official Account",
+        "footer.douyin": "Douyin Account",
+        "footer.copyright": "©2024 Senrytech All Rights Reserved | Lu ICP Bei XXXXXXXX"
+    },
+    es: {
+        // 导航
+        "nav.home": "Inicio",
+        "nav.products": "Productos",
+        "nav.cutting": "Máquinas de corte láser",
+        "nav.welding": "Máquinas de soldadura láser",
+        "nav.marking": "Máquinas de marcado láser",
+        "nav.solutions": "Soluciones",
+        "nav.about": "Sobre nosotros",
+        "nav.cases": "Casos",
+        "nav.contact": "Contacto",
+        
+        // 语言选择
+        "lang.select": "Seleccionar idioma:",
+        
+        // Banner
+        "banner.title": "Senrytech - Fabricante profesional de equipos láser",
+        "banner.subtitle": "Alta precisión · Alta estabilidad · Soluciones industriales 24/7",
+        "banner.cta1": "Ver productos core",
+        "banner.cta2": "Obtener cotización",
+        "banner.title2": "15 años de tecnología láser",
+        "banner.subtitle2": "Desde el diseño hasta la producción, desde la instalación hasta el postventa, ofrecemos soluciones completas de procesamiento láser",
+        "banner.cta3": "Explorar soluciones",
+        "banner.cta4": "Ver casos de éxito",
+        
+        // 核心优势
+        "advantages.title": "Nuestras ventajas core",
+        "advantages.subtitle": "15 años专注于研发和制造设备激光， hemos ganado la confianza de clientes globales con innovación tecnológica y servicio de calidad",
+        "advantages.tech.title": "Fortaleza técnica",
+        "advantages.tech.desc": "15 años de experiencia en I+D, más de 100 patentes técnicas, con un equipo profesional de I+D y laboratorios avanzados",
+        "advantages.service.title": "Garantía del producto",
+        "advantages.service.desc": "Respuesta postventa 24 horas, garantía de 3 años en componentes core, más de 50 puntos de servicio globales",
+        "advantages.value.title": "Valor para el cliente",
+        "advantages.value.desc": "Ayudando a más de 500 fábricas a mejorar la eficiencia de producción en un 40% y reducir costos operativos en un 25%",
+        
+        // 客户案例相关的西班牙语翻译补充完整
+        "cases.test1.name": "Gerente Zhang",
+        "cases.test1.title": "Director de compras, Planta de procesamiento de metales",
+        "cases.test1.content": "Los equipos de corte láser de Senrytech funcionan de forma estable con alta precisión de corte, lo que ha mejorado en gran medida nuestra eficiencia de producción. Su servicio postventa responde rápidamente y resuelve problemas de forma profesional y eficiente."
+        // 其他西班牙语翻译内容...
+    }
+};
+
+// 多语言切换功能实现
 document.addEventListener('DOMContentLoaded', function() {
     // 获取所有语言按钮
     const langButtons = document.querySelectorAll('.lang-btn');
