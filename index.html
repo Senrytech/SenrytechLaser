@@ -1395,3 +1395,86 @@
                 "cases.quality": "Calidad mejorada",
                 "cases.testimonials": "Testimonios de clientes",
                 "cases.test1.name": "Gerente</script></body></html>
+                
+    // 多语言切换功能实现
+document.addEventListener('DOMContentLoaded', function() {
+    // 获取所有语言按钮
+    const langButtons = document.querySelectorAll('.lang-btn');
+    const currentLangElement = document.getElementById('current-lang');
+    
+    // 语言切换函数
+    function switchLanguage(lang) {
+        // 隐藏所有语言内容
+        document.querySelectorAll('[data-lang]').forEach(el => {
+            el.style.display = 'none';
+        });
+        
+        // 显示选中语言的内容
+        document.querySelectorAll(`[data-lang="${lang}"]`).forEach(el => {
+            el.style.display = '';
+        });
+        
+        // 更新当前语言显示
+        if (currentLangElement) {
+            switch(lang) {
+                case 'zh':
+                    currentLangElement.textContent = '中文';
+                    break;
+                case 'en':
+                    currentLangElement.textContent = 'English';
+                    break;
+                case 'es':
+                    currentLangElement.textContent = 'Español';
+                    break;
+            }
+        }
+        
+        // 应用翻译内容
+        applyTranslations(lang);
+        
+        // 保存用户语言偏好到本地存储
+        localStorage.setItem('preferredLang', lang);
+    }
+    
+    // 应用翻译
+    function applyTranslations(lang) {
+        // 获取所有需要翻译的元素
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            // 检查翻译是否存在
+            if (translations[lang] && translations[lang][key]) {
+                el.textContent = translations[lang][key];
+            }
+        });
+        
+        // 处理占位符翻译
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+            const key = el.getAttribute('data-i18n-placeholder');
+            if (translations[lang] && translations[lang][key]) {
+                el.placeholder = translations[lang][key];
+            }
+        });
+    }
+    
+    // 为语言按钮添加点击事件
+    langButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const lang = this.getAttribute('data-lang');
+            if (lang) {
+                switchLanguage(lang);
+            }
+        });
+    });
+    
+    // 检查用户是否有保存的语言偏好
+    const savedLang = localStorage.getItem('preferredLang');
+    if (savedLang) {
+        switchLanguage(savedLang);
+    } else {
+        // 默认显示中文
+        switchLanguage('zh');
+    }
+});
+</script>
+</body>
+</html>
