@@ -1,980 +1,690 @@
 <!DOCTYPE html>
- <html class="no-js"> 
-    <head>
-        <!-- Meta Tags -->        
-        <meta charset="utf-8">
-        <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Jinan Senrytech - Laser Cutting & Welding & Cleaner & Engraver Manufacturer</title>
-        <meta name="description" content="Senrytech specializes in laser cutting, welding, cleaning & engraving machines. High-precision industrial laser equipment with global shipping and after-sales service."/>
-        <meta name="keywords" content="Senrytech, laser cutting machine, laser welding machine, laser cleaning machine, laser engraver, laser equipment manufacturer, industrial laser machine, laser cutting solution, laser welding equipment"/>
-        <meta name="author" content="Senrytech Co., Ltd."/>
-        <link rel="apple-touch-icon" sizes="57x57" href="fab/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="fab/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="fab/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="fab/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="fab/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="fab/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="fab/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="fab/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="fab/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192"  href="fab/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="fab/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="fab/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="fab/favicon-16x16.png">
-        <link rel="manifest" href="fab/manifest.json">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="fab/ms-icon-144x144.png">
-        <meta name="theme-color" content="#ffffff">
-       <!--  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">  -->
-
-        <!-- Web Fonts -->        
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'/>
-        <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,300,500,700' rel='stylesheet' type='text/css'/>
-
-        <!-- Css Global Compulsory -->
-        <link rel="stylesheet" href="css/bootstrap.min.css"/> 
-
-        <!-- Css Implementing Plugins -->
-        <link rel="stylesheet" href="css/font-awesome.min.css"/>                          
-        <link rel="stylesheet" type="text/css" href="css/revolution/style.css" media="screen"/>
-        <link rel="stylesheet" type="text/css" href="css/revolution/extralayers.css" media="screen"/> 
-        <link rel="stylesheet" type="text/css" href="css/revolution/settings.css" media="screen"/>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Senrytech - 专业激光设备制造商</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- 配置Tailwind -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1E40AF', // 深蓝色作为主色调，代表专业和技术
+            secondary: '#F97316', // 橙色作为辅助色，用于CTA按钮
+            dark: '#1E293B', // 深色背景
+            light: '#F8FAFC' // 浅色背景
+          },
+          fontFamily: {
+            inter: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .text-shadow-lg {
+        text-shadow: 0 4px 8px rgba(0,0,0,0.25);
+      }
+    }
+  </style>
+</head>
+<body class="font-inter bg-light text-gray-800 overflow-x-hidden">
+  <!-- 顶部固定导航栏 -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 shadow-sm transition-all duration-300" style="height: 5vh; min-height: 48px; max-height: 64px;">
+    <div class="container mx-auto px-4 h-full flex items-center justify-between">
+      <!-- 品牌Logo -->
+      <a href="#" class="flex items-center space-x-2">
+        <span class="text-primary text-2xl font-bold">Senrytech</span>
+      </a>
+      
+      <!-- 桌面端导航 -->
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="#" class="text-gray-700 hover:text-primary font-medium transition-colors">首页</a>
         
-         <link rel="stylesheet" type="text/css" href="css/nivo-slider.css" media="screen"/> 
-        <link rel="stylesheet" type="text/css" href="css/slider.css" media="screen"/>
+        <!-- 产品中心下拉菜单 -->
+        <div class="relative group">
+          <a href="#" class="flex items-center text-gray-700 hover:text-primary font-medium transition-colors">
+            产品中心
+            <i class="fa fa-chevron-down ml-1 text-xs"></i>
+          </a>
+          <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top scale-95 group-hover:scale-100">
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-primary hover:text-white">切割机</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-primary hover:text-white">焊接机</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-primary hover:text-white">打标机</a>
+          </div>
+        </div>
         
-        <link rel="stylesheet" href="css/owl.carousel.css"/>
-        <link rel="stylesheet" href="css/owl.theme.css"/>         
-        <link rel="stylesheet" href="css/cubeportfolio.min.css"/>
-        <link rel="stylesheet" href="css/jquery.mmenu.css"/>
-
-        <!-- Css Theme -->           
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body> 
-
-        <!--Start Preloader -->
-        <div id="preloader">
-            <div class="preloader-container">
-                <div class="spinner">
-                    <div class="bounce1"></div>
-                    <div class="bounce2"></div>
-                    <div class="bounce3"></div>
-                </div>
-            </div>
-        </div>
-        <!-- End Preloader-->                  
-
-        <!-- Navbar -->
-        <nav class="navbar navbar-default header-nav" role="navigation">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <!-- Logo -->        
-                    <a class="navbar-brand" href="index.html"><img src="img/logonew.png" class="img-responsive" alt="TrueLineInterior"></a>        
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>                                                                          
-                       <!-- <li><a href="#projects">Projects</a></li>     -->               
-                        <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Technology  <i class="fa fa-angle-down fa-lg"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                                    <li><a href="fiberlaser.html">High-Performance Fiber Laser Technology</a></li>
-                                    <li><a href="beamfocusing.html">Precise Beam Transmission and Focusing System</a></li>
-                                    <li><a href="controlsystem.html">Numerical Control System and Precision Motion Control Technology</a></li>
-                                    <li><a href="efficient.html">Efficient Auxiliary System Technology</a></li>
-                                     <!-- <li><a href="#">Modular Kitchen and wardrobe Manufacturer</a></li>
-                                   <li><a href="architect.html">Architecture in Delhi NCR</a></li> -->
-                                    <li><a href="processdatabase.html">Intelligent Control and Process Database Technology</a></li>
-                                                                     
-                                </ul>
-                        </li>
-                       <li><a href="contact.html">Contact</a></li>  
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- Navbar -->
-
-        <!-- Slider -->
-        <div class="slider-container">
-        <!-- Slider Image -->
-        <div id="mainSlider" class="nivoSlider slider-image">
-            <img src="img/slider-images/image1.jpg" alt="Fiber laser cutting machine for metal processing - Senrytech" title="#htmlcaption1" />
-            <img src="img/slider-images/image2.jpg" alt="Fiber laser cutting machine for metal processing - Senrytech" title="#htmlcaption2" />
-             <img src="img/slider-images/image3.jpg" alt="Fiber laser tube cutting machine for tube processing - Senrytech" title="#htmlcaption3" />
-             <img src="img/slider-images/image4.jpg" alt="Fiber laser marking machine for metal marking - Senrytech" title="#htmlcaption4" />
-             <img src="img/slider-images/image5.jpg" alt="Fiber laser welding machine for metal welding - Senrytech" title="#htmlcaption5" />
-             <img src="img/slider-images/image6.jpg" alt="Fiber laser cleaning machine for metal processing - Senrytech" title="#htmlcaption6" />
-             <img src="img/slider-images/image7.jpg" alt="Fiber laser engraving machine for metal processing - Senrytech" title="#htmlcaption7" />
-             <img src="img/slider-images/image8.jpg" alt="Fiber laser machines - Jinan Senrytech Machinery" title="#htmlcaption8" />
-        </div>
-        <!-- Slider Caption 1 
-        <div id="htmlcaption1" class="nivo-html-caption slider-caption-1">
-            <div class="slider-progress"></div>
-            <div class="container">
-                <div class="slider3-cap-wrapper3 slide-text">
-                    <div class="slide-one-text slide-def hp1-cap1">
-                        <div class="slide-one-dec wow fadeInDown" data-wow-duration=".9s" data-wow-delay="0.8s">
-                            <h4>It has finally started...</h4>
-                        </div>
-                        <div class="slide-one-title wow fadeInDown" data-wow-duration=".9s" data-wow-delay="0.8s">
-                            <h2>Huge sale up to </h2>
-                        </div>
-                        <div class="slide-one-title wow fadeInDown" data-wow-duration=".9s" data-wow-delay="0.8s">
-                            <h1><span class="slide-text-big">70%</span>off</h1>
-                        </div>
-                        <div class="check-it-out slide2btn-check1 wow fadeInDown" data-wow-duration=".9s" data-wow-delay="0.8s">
-                            <a class="btn-def-black" href="shop.html">Shop now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>-->
-        <!-- Slider Caption 2
-        <div id="htmlcaption2" class="nivo-html-caption slider-caption-2">
-            <div class="slider-progress"></div>
-            <div class="container">
-                <div class="slider3-cap-wrapper3 slide-two-cap slide-text text-center">
-                    <div class="slide-two-text slide-def hp1-cap2">
-                        <div class="slide-two-title slide-underline posr wow fadeInUp text-center" data-wow-duration=".9s" data-wow-delay="0.8s">
-                            <h4>Men's Accessories</h4>
-                        </div>
-                        <div class="slide-two-dec wow fadeInUp" data-wow-duration=".9s" data-wow-delay="0.8s">
-                            <h1>Only Rs 89.00</h1>
-                        </div>
-                        <div class="check-it-out slide2btn-check2 wow fadeInUp" data-wow-duration=".9s" data-wow-delay="0.8s">
-                            <a class="btn-def-black" href="shop.html">Shop Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>   -->
-        <!-- End Slider -->         
-
-        <!-- Site Wrapper -->
-        <div class="site-wrapper" id="about">
-
-            <!-- Who We Are -->            
-            <div class="container">              
-                    
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1 about-caption text-center">
-                        <!-- Section General Title -->
-                        <div class="general-title">
-                            <h2>Senrytech: Professional Laser Equipment Manufacturer</h2>
-                            <div class="space-bottom-2x"></div>   
-                        </div>
-                        <p>Jinan Senrytech Machinery Co.. Ltd (Jinan Senrytech or Senrytech Fiber Laser) mainly produces laser cutting machines, welding machines, marking machines, cleaning machines, bending machines, and a series of advanced laser equipment. These equipment integrates the most cutting-edge scientific and technological achievements, and is widely used in various industries with its characteristics of high precision, high efficiency, and high stability. Whether it is metal processing, electronic manufacturing, or high-end industries such as automotive, aerospace, the company's products can perform excellently, to provide customers with high-quality solutions.  </p>
-                        <div class="space-bottom-2x"></div>   
-                    </div>                            
-                </div>                
-                <!--<div class="row">    
-                   
-                    <div class="col-md-4 about-caption">
-                        <div class="col-sm-2">
-                            <i class="fa fa-html5 fa-2x"></i>                                    
-                        </div>
-                        <div class="col-sm-12">
-                            <h3>Nam libero tempore</h3>                                                                        
-                            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p>
-                        </div>
-                    </div> 
-
-                    <div class="col-md-4 about-caption">
-                        <div class="col-sm-2">
-                            <i class="fa fa-desktop fa-2x"></i>                                                                                
-                        </div>
-                        <div class="col-sm-12">
-                            <h3>Nam libero tempore</h3>                                           
-                            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p>
-                        </div>
-                    </div>
-
-                   
-                    <div class="col-md-4 about-caption">
-                        <div class="col-sm-2">
-                            <i class="fa fa-font fa-2x"></i>                                                                                
-                        </div>
-                        <div class="col-sm-12">
-                            <h3>Nam libero tempore</h3>                                                                                            
-                            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p>                                
-                        </div>
-                    </div>    
-
-                </div>-->           
-            </div><!-- /container -->                   
-            <!-- End Who We Are -->
-
-            <!-- Our Process -->            
-            <!--<section class="bg-color padding-bottom padding-top-x2">
-                <div class="container">                                                        
-
-                   
-                    <div class="row">
-                        <div class="col-md-6">
-                            <a href="#">
-                                <img src="img/larx.png" alt="Specifie an alternate text for an image" class="img-responsive">    
-                            </a>
-                        </div>                    
-                        <div class="col-md-6">
-                          
-                            <div class="cta-title-2">
-                                <div class="space-bottom-2x"></div>      
-                                <h2>LARX TEMPLATE</h2>
-                                <div class="space-bottom-2x"></div>      
-                            </div>
-                            <p>HTML5 Template that can be used by a creative agency or as a personal portfolio. It’s a fully responsive one/multi paged template built on Bootstrap 3 Framework. It comes with many intro section versions.</p>
-                            <div class="margin-top-x2">
-                                <a href="http://themeforest.net/item/larx-interior-design-studio-template/8170114" target="_blank" class="btn gold-btn">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>                               
-            </section>-->                       
-            <!-- End Our Process -->
-
-            <!-- Projects -->            
-            <div class="container padding-bottom padding-top-x2" id="projects">
-                <div class="row">
-                               
-                    <!-- Section General Title -->
-                    <div class="general-title text-center">
-                        <h2>Our Works</h2>
-                        <div class="space-bottom-2x"></div>   
-                    </div>
-                             
-                    <!-- Portfolio Filter -->
-                    <div id="filters-container" class="cbp-l-filters-alignRight">
-                        <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">
-                            All <div class="cbp-filter-counter"></div>
-                        </div>
-                         <div data-filter=".basic" class="cbp-filter-item">
-                            Basic <div class="cbp-filter-counter"></div>
-                        </div>
-                        <div data-filter=".enclosed" class="cbp-filter-item">
-                            Enclosed <div class="cbp-filter-counter"></div>
-                        </div>
-                        <div data-filter=".tube" class="cbp-filter-item">
-                            Tube <div class="cbp-filter-counter"></div>
-                        </div>
-                        <div data-filter=".marking" class="cbp-filter-item">
-                            Marking <div class="cbp-filter-counter"></div>
-                        </div>
-                        <div data-filter=".welding" class="cbp-filter-item">
-                            Welding <div class="cbp-filter-counter"></div>
-                        </div>
-                        <div data-filter=".cleaning" class="cbp-filter-item">
-                            Cleaning <div class="cbp-filter-counter"></div>
-                        </div>
-                        <div data-filter=".engraving" class="cbp-filter-item">
-                            Engraving <div class="cbp-filter-counter"></div>
-                        </div>
-                    </div>
-
-                    <div id="grid-container" class="cbp-l-grid-masonry">
-                        <ul>
-
-                            <!-- Portfolio Item (image and description) -->
-                            <li class="cbp-item basic cbp-l-grid-masonry-height2">
-                                <a class="cbp-caption cbp-lightbox" data-title="Basic" href="img/projects/1big.jpg">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="img/projects/1.jpg" alt="Senrytech SY-1540S fiber laser sheet cutting machine 1500w">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-title">Fiber Laser Sheet Cutting SY-1540S</div>
-                                                <div class="cbp-l-caption-desc">1500w power, ideal for stainless steel and aluminum cutting</div>                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <!-- Portfolio Item (image and description) -->
-                            <li class="cbp-item tube cbp-l-grid-masonry-height1">
-                                <a class="cbp-caption cbp-lightbox" data-title="Tube" href="img/projects/2big.jpg">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="img/projects/2.jpg" alt="Senrytech fiber laser tube cutting machine 1000w">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-title">Fiber Laser Tube Cutting SY-T6011S</div>
-                                                <!--<div class="cbp-l-caption-desc">2014/04</div>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <!-- Portfolio Item (image and description) -->
-                            <li class="cbp-item basic cbp-l-grid-masonry-height1">
-                                <a class="cbp-caption cbp-lightbox" data-title="Basic" href="img/projects/3big.jpg">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="img/projects/3.jpg" alt="Senrytech fiber laser cutting machine 6000w">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-title">Fiber Laser Sheet Cutting SY-1530H</div>
-                                                <!--<div class="cbp-l-caption-desc">2012/02</div>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <!-- Portfolio Item (image and description) -->
-                            <li class="cbp-item basic cbp-l-grid-masonry-height2">
-                                <a class="cbp-caption cbp-lightbox" data-title="Basic" href="img/projects/4big.jpg">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="img/projects/4.jpg" alt="Senrytech fiber laser cutting machine 3000w">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-title">Fiber Laser Sheet Cutting SY-1530H</div>                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <!-- Portfolio Item (image and description) -->
-                            <li class="cbp-item enclosed cbp-l-grid-masonry-height2">
-                                <a class="cbp-caption cbp-lightbox" data-title="Enclosed" href="img/projects/5big.jpg">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="img/projects/5.jpg" alt="Senrytech enclosed fiber laser cutting machine 6000w">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-title">Enclosed Fiber Laser Cutting SY-2560DP</div>
-                                                <!--<div class="cbp-l-caption-desc">2011/01</div>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <!-- Portfolio Item (image and description) -->
-                            <li class="cbp-item basic cbp-l-grid-masonry-height1">
-                                <a class="cbp-caption cbp-lightbox" data-title="Basic" href="img/projects/6big.jpg">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="img/projects/6.jpg" alt="Senrytech fiber laser cutting machine 6000w">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-title">Fiber Laser Cutting SY-6020H</div>
-                                                <!--<div class="cbp-l-caption-desc">2014/09</div>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <!-- Portfolio Item (image and description) -->
-                            <li class="cbp-item basic cbp-l-grid-masonry-height1">
-                                <a class="cbp-caption cbp-lightbox" data-title="Basic" href="img/projects/7big.jpg">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="img/projects/7.jpg" alt="Senrytech fiber laser cutting machine 20000w">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-title">Fiber Laser Cutting SY-13025</div>
-                                                <!--<div class="cbp-l-caption-desc">2014/04</div>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <!-- Portfolio Item (image and description) -->
-                            <li class="cbp-item basic cbp-l-grid-masonry-height1">
-                                <a class="cbp-caption cbp-lightbox" data-title="Basic" href="img/projects/8big.jpg">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="img/projects/8.jpg" alt="Senrytech fiber laser cutting machine 12000w">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-title">Fiber Laser Cutting SY-14040</div>
-                                                <!--<div class="cbp-l-caption-desc">2012/02</div>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            
-                             <!-- Portfolio Item (image and description) -->
-                            <li class="cbp-item enclosed cbp-l-grid-masonry-height1">
-                                <a class="cbp-caption cbp-lightbox" data-title="House" href="img/projects/H1-b.jpg">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="img/projects/H1-s.jpg" alt="Senrytech enclosed fiber laser cutting machine 30000w">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-title">Enclosed Fiber Laser Cutting SY-2560DP</div>
-                                                <!--<div class="cbp-l-caption-desc">2012/02</div>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            
-                            
-                             <!-- Portfolio Item (image and description) -->
-                            <li class="cbp-item tube cbp-l-grid-masonry-height1">
-                                <a class="cbp-caption cbp-lightbox" data-title="House" href="img/projects/H2-b.jpg">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="img/projects/H2-s.jpg" alt="Senrytech Tube Laser Cutting Machine 3000w 110mm">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-title">Tube Fiber Laser Cutting SY-T6011S</div>
-                                                <!--<div class="cbp-l-caption-desc">2012/02</div>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            
-                            
-                             <!-- Portfolio Item (image and description) -->
-                            <li class="cbp-item enclosed cbp-l-grid-masonry-height1">
-                                <a class="cbp-caption cbp-lightbox" data-title="House" href="img/projects/H3-b.jpg">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="img/projects/H3-s.jpg" alt="Senrytech enclosed fiber laser cutting machine 50000w">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-title">Enclosed Fiber Laser Cutting SY-2560DP</div>
-                                                <!--<div class="cbp-l-caption-desc">2012/02</div>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            
-                            
-                            <!-- Portfolio Item (image and description) -->
-                            <li class="cbp-item enclosed cbp-l-grid-masonry-height1">
-                                <a class="cbp-caption cbp-lightbox" data-title="House" href="img/projects/V1-b.jpg">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="img/projects/V1-s.jpg" alt="Senrytech enclosed fiber laser cutting machine 12000w">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-title">Enclosed Fiber Laser Cutting SY-2560DP</div>
-                                                <!--<div class="cbp-l-caption-desc">2012/02</div>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            
-                             <!-- Portfolio Item (image and description) -->
-                            <li class="cbp-item enclosed cbp-l-grid-masonry-height1">
-                                <a class="cbp-caption cbp-lightbox" data-title="House" href="img/projects/V2-b.jpg">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="img/projects/V2-s.jpg" alt="Senrytech enclosed fiber laser cutting machine 40000w">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-title">Enclosed Fiber Laser Cutting SY-2040DP</div>
-                                                <!--<div class="cbp-l-caption-desc">2012/02</div>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <!-- Portfolio Item (image and description) -->
-                            <li class="cbp-item welding cbp-l-grid-masonry-height2">
-                                <a class="cbp-caption cbp-lightbox" data-title="Welding" href="img/projects/9big.jpg">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="img/projects/9.jpg" alt="Senrytech fiber laser welding machine 1500w">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-title">Fiber Laser Welding machine SY-H1500</div>
-                                             <!--   <div class="cbp-l-caption-desc">2014/04</div>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            
-                            <!-- Portfolio Item (image and description) -->
-                            <li class="cbp-item welding cbp-l-grid-masonry-height2">
-                                <a class="cbp-caption cbp-lightbox" data-title="Welding" href="img/projects/HO1-b.jpg">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="img/projects/HO1-s.jpg" alt="Senrytech fiber laser welding machine 1500w">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-title">Fiber Laser Welding machine SY-H1500</div>
-                                             <!--   <div class="cbp-l-caption-desc">2014/04</div>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            
-                             <!-- Portfolio Item (image and description) -->
-                            <li class="cbp-item welding cbp-l-grid-masonry-height2">
-                                <a class="cbp-caption cbp-lightbox" data-title="Welding" href="img/projects/HO2-b.jpg">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="img/projects/HO2-s.jpg" alt="Senrytech fiber laser welding machine 3000w">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-title">Fiber Laser Welding machine SY-H3000</div>
-                                             <!--   <div class="cbp-l-caption-desc">2014/04</div>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            
-                            
-                             <!-- Portfolio Item (image and description) -->
-                            <li class="cbp-item welding cbp-l-grid-masonry-height2">
-                                <a class="cbp-caption cbp-lightbox" data-title="Welding" href="img/projects/HO3-b.jpg">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="img/projects/HO3-s.jpg" alt="Senrytech fiber laser welding machine 1500w">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-title">Fiber Laser Welding machine SY-H1500</div>
-                                             <!--   <div class="cbp-l-caption-desc">2014/04</div>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            
-                            
-                             <!-- Portfolio Item (image and description) -->
-                            <li class="cbp-item welding cbp-l-grid-masonry-height2">
-                                <a class="cbp-caption cbp-lightbox" data-title="Welding" href="img/projects/HO4-b.jpg">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="img/projects/HO4-s.jpg" alt="Senrytech fiber laser welding machine 1500w">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-title">Fiber Laser Welding machine SY-H1500</div>
-                                             <!--   <div class="cbp-l-caption-desc">2014/04</div>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            
-                            
-                              <!-- Portfolio Item (image and description) -->
-                            <li class="cbp-item welding cbp-l-grid-masonry-height2">
-                                <a class="cbp-caption cbp-lightbox" data-title="Welding" href="img/projects/HO5-b.jpg">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="img/projects/HO5-s.jpg" alt="Senrytech fiber laser 4 in 1 welding machine 1500w">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-title">Fiber Laser 4in1 welding machine SY-H1500</div>
-                                             <!--   <div class="cbp-l-caption-desc">2014/04</div>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <!-- Portfolio Item (image and description) -->
-                            <li class="cbp-item cleaning cbp-l-grid-masonry-height1">
-                                <a class="cbp-caption cbp-lightbox" data-title="Cleaning" href="img/projects/10big.jpg">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="img/projects/10.jpg" alt="Senrytech fiber laser cleaning machine 3000w">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-title">Fiber Laser Cleaning SY-H3000</div>
-                                              <!--  <div class="cbp-l-caption-desc">2014/05</div>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <!-- Portfolio Item (image and description) -->
-                            <li class="cbp-item basic cbp-l-grid-masonry-height1">
-                                <a class="cbp-caption cbp-lightbox" data-title="Basic" href="img/projects/11big.jpg">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="img/projects/11.jpg" alt="Senrytech fiber laser cutting machine 12000w">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-title">Fiber Laser Sheet Cutting machine SY-25120H</div>
-                                               <!-- <div class="cbp-l-caption-desc">2012/01</div>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <!-- Portfolio Item (image and description) -->
-                            <li class="cbp-item marking cbp-l-grid-masonry-height1">
-                                <a class="cbp-caption cbp-lightbox" data-title="Marking" href="img/projects/12big.jpg">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="img/projects/12.jpg" alt="Senrytech fiber laser marking machine 20w">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-title">Fiber Laser Marking machine SY-Desktop</div>
-                                                <!--<div class="cbp-l-caption-desc">2010/01</div>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <!-- Portfolio Item (image and description) -->
-                            <li class="cbp-item marking cbp-l-grid-masonry-height1">
-                                <a class="cbp-caption cbp-lightbox" data-title="Marking" href="img/projects/marking 20w - 1b.jpg">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="img/projects/marking 20w - 1s.jpg" alt="Senrytech fiber laser marking machine 20w">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-title">Fiber Laser Marking machine SY-Desktop</div>
-                                                <!--<div class="cbp-l-caption-desc">2010/01</div>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <!-- Portfolio Item (image and description) -->
-                            <li class="cbp-item marking cbp-l-grid-masonry-height1">
-                                <a class="cbp-caption cbp-lightbox" data-title="Marking" href="img/projects/marking 10w - 1b.jpg">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="img/projects/marking 10w - 1s.jpg" alt="Senrytech fiber laser marking machine 10w">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-title">Fiber Laser Marking machine SY-Desktop</div>
-                                                <!--<div class="cbp-l-caption-desc">2010/01</div>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            
-                            <!-- Portfolio Item (image and description) -->
-                            <li class="cbp-item marking cbp-l-grid-masonry-height1">
-                                <a class="cbp-caption cbp-lightbox" data-title="Marking" href="img/projects/marking 30w - 1b.jpg">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="img/projects/marking 30w - 1s.jpg" alt="Senrytech fiber laser marking machine 30w">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-title">Fiber Laser Marking machine SY-Desktop</div>
-                                                <!--<div class="cbp-l-caption-desc">2010/01</div>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <!-- Portfolio Item (image and description) -->
-                            <li class="cbp-item cleaning cbp-l-grid-masonry-height1">
-                                <a class="cbp-caption cbp-lightbox" data-title="Cleaning" href="img/projects/cleaning 1b.jpg">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="img/projects/cleaning 1s.jpg" alt="Senrytech fiber laser cleaning machine 1500w">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-title">Fiber Laser Cleaning machine SY-C1500</div>
-                                                <!--<div class="cbp-l-caption-desc">2010/01</div>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <!-- Portfolio Item (image and description) -->
-                            <li class="cbp-item engraving cbp-l-grid-masonry-height1">
-                                <a class="cbp-caption cbp-lightbox" data-title="Engraving" href="img/projects/engraving 1b.jpg">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="img/projects/engraving 1s.jpg" alt="Senrytech Co2 fiber laser engraving machine">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-title">Co2 Laser Engraving machine</div>
-                                                <!--<div class="cbp-l-caption-desc">2010/01</div>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-
-                             <!-- Portfolio Item (image and description) -->
-                            <li class="cbp-item engraving cbp-l-grid-masonry-height1">
-                                <a class="cbp-caption cbp-lightbox" data-title="Engraving" href="img/projects/engraving 2b.jpg">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="img/projects/engraving 2s.jpg" alt="Senrytech fiber laser engraving machine">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-title">Fiber Laser Engraving machine</div>
-                                                <!--<div class="cbp-l-caption-desc">2010/01</div>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </div>                                                    
-                </div><!-- /row -->   
-            </div><!-- /container -->
-            <!-- End Projects -->            
-            
-            <!-- Testimonials -->
-            <div id="testimonials">
-                <div class="container text-center padding-bottom padding-top-x2">
-                    
-                    <div class="general-title">
-                        <h2>From Clients</h2>
-                        <div class="space-bottom-2x"></div>   
-                    </div>
-                    <div class="row">
-                        <div id="owl-testimonials" class="owl-carousel owl-theme">
-
-                            <div class="item">
-                                <div class="col-md-8 col-md-offset-2 t-info">            
-                                    <p>Since switching to Senrytech laser cutters on our factory floor, downtime has practically vanished. These machines are absolute workhorses – they run 24/7 shifts with incredible consistency. The precision is spot-on batch after batch, meaning far less scrap material and rework. For us, reliability equals profitability, and Senrytech delivers. Their local service team is also fantastic when we need them, getting us back up and running incredibly fast. Best investment we've made for steady production</p>                                    
-                                    <b>- Hermione Granger</b>
-                                </div>                     
-                            </div>
-
-                            <div class="item">
-                                <div class="col-md-8 col-md-offset-2 t-info">            
-                                    <p>As a small shop owner, I needed a laser cutter that was powerful enough for professional jobs but wouldn't require an engineering degree to operate. Our Senrytech machine hit the sweet spot. The software is surprisingly intuitive – my team picked it up quickly and didn't need extensive training. The cut quality? Exceptional! Clean edges on everything from intricate acrylic designs to thicker metals, impressing our most demanding clients. It's robust, user-friendly, and produces results that make us look great. Exactly what a growing business needs</p>                                    
-                                    <b>- Harry Potter</b>
-                                </div>                     
-                            </div>
-
-                            <div class="item">
-                                <div class="col-md-8 col-md-offset-2 t-info">            
-                                    <p>Pushing the limits of micro-fabrication requires insane precision, and our Senrytech laser cutter consistently delivers micron-level accuracy. Handling exotic alloys and ultra-thin materials was a constant challenge with our old system. The Senrytech's advanced optics, stable beam control, and responsive software handle it all in stride. Features like real-time monitoring and automated calibration save us hours in setup and quality checks. It's not just a cutter; it's a precision instrument that lets us innovate and meet specs we couldn't before. Highly recommend for demanding technical applications.</p>
-                                    <b>- Ginny Wesley</b>
-                                </div>                     
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Testimonials -->
-
-               
-
-            <!-- Our Clients -->                
-            <div id="our-clients">
-                <div class="padding-top-x2 padding-bottom container text-center">  
-                    <!-- Section General Title -->
-                    <div class="general-title">
-                        <h2>Our Clients</h2>    
-                        <div class="space-bottom-2x"></div>                      
-                    </div>                            
-                    <div class="row">                                
-                
-                        <div id="owl-demo">
-                            <a href="#"><img src="img/about/client_1.png" alt="Owl Image"></a>
-                            <a href="#"><img src="img/about/client_2.png" alt="Owl Image"></a>
-                            <a href="#"><img src="img/about/client_3-(1).png" alt="Owl Image"></a>
-                            <a href="#"><img src="img/about/client_3.png" alt="Owl Image"></a>
-                            <a href="#"><img src="img/about/client_5.png" alt="Owl Image"></a>
-                            <a href="#"><img src="img/about/client_6.png" alt="Owl Image"></a>
-                            <a href="#"><img src="img/about/client_7.png" alt="Owl Image"></a>
-                            <a href="#"><img src="img/about/client_8.png" alt="Owl Image"></a>
-                            <a href="#"><img src="img/about/client_9.png" alt="Owl Image"></a>
-                            <a href="#"><img src="img/about/client_10.png" alt="Owl Image"></a>
-                             <a href="#"><img src="img/about/client_11.png" alt="Owl Image"></a>
-                        </div>                                
-
-                    </div><!-- /row -->  
-                </div><!-- /container -->
-            </div>                    
-            <!-- End Our Clients -->                                         
-
-           
-                         
-        </div><!-- /site-wrapper -->
-              
-
-                              
-
-        <div class="f-action" id="contactus">
-            <a href="#" class="f-cta" data-toggle="modal" data-target="#myModal">Enquiry Now</a>
-        </div>
-                
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content text-center">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- Contact Form (name, email, phone and message inputs for your email form "should change your email adress in contact.php file") -->     
-                        <div id="contact">                            
-                            <div id="message"></div>
-                            <form>
-                                <fieldset>
-                                    <div class="col-md-12">
-                                        <!-- Name -->
-                                        <input name="name" type="text" id="name" size="30" value="" placeholder="Name"/>
-                                        <br />
-                                        <!-- Email -->
-                                        <input name="email" type="text" id="email" size="30" value="" placeholder="Email"/>
-                                        <br /> 
-                                        <!-- Phone -->
-                                        <input name="phone" type="text" id="phone" size="30" value="" placeholder="Phone"/>
-
-                                        <!-- Message -->                                                                        
-                                        <textarea name="comments" cols="40" rows="5" id="comments" placeholder="Message"></textarea>
-                                         
-                                        <!-- Submit Button -->                                        
-                                        <button type="submit" class="btn blog-btn submit" id="submit" value="Submit">Submit</button>
-                                    </div>                                                                                                                                                             
-                                </fieldset>
-                            </form>                            
-                        </div>          
-                        <!-- End Contact Form -->
-                    </div>                    
-                </div>
-            </div>
-        </div>     
-            
-        <!-- Footer -->  
-        <div class="footer-big">
-            <div class="container">
-                <div class="row">
-
-                    <!-- About Us Information -->
-                    <div class="col-md-3 col-sm-6">                           
-                        <div class="f-logo">
-                            <h2>Our<br>Offices</h2>                                                                    
-                        </div>
-                    </div>
-                    
-                    <!-- Recent Posts -->
-                    
-
-                    <!-- Latest Tweet -->
-                    
-
-                    <!-- Recent Works -->
-                    <div class="col-md-6 col-sm-6 f-inner">   
-                            <div class="col-sm-1">
-                                <i class="fa fa-map-marker fa-lg"></i> 
-                            </div>
-                            <div class="col-sm-11">
-                                <strong>China</strong>
-                                <div class="f-space"></div>
-                               <address>                                
-                                    No 2008, Xinluo Street, High-tech Zone<br>  
-                                    Jinan City- 250101           <br>                    
-                                    <abbr title="Phone">P:</abbr> (0086) 13465575719 <br/>
-                                    <abbr title="Phone">M:</abbr> +86 134 6557 5719 <br/>
-                                    info@senrytech.com<br/>
-                                    support@senrytech.com
-                                </address>
-                            </div>      
-                        </div>                             
-
-                       <div class="col-md-3 col-sm-6">                           
-                        <div class="f-logo">
-                          <img src="img/logonew.png" width="167" height="82"> 
-                            </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>   
-
-        <div id="footer">
-            <div class="container">   
-                <div class="row">                                                         
-                    <!-- Copyright -->                                                       
-                    <div class="col-sm-6 col-md-6 f-copyright">                        
-                        <span>© Copyright Interior - All Rights Reserved</span>                        
-                    </div>                      
-                    <div class="col-sm-6 col-md-6">
-                        <!-- Social Icons -->                              
-                        <ul class="footer-social">
-                            <li><a href="#"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></span></a></li>
-                            <li><a href="#"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></a></li>
-                            <li><a href="#"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-skype fa-stack-1x fa-inverse"></i></span></a></li>
-                            <li><a href="#"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-pinterest fa-stack-1x fa-inverse"></i></span></a></li>
-                        </ul>
-                    </div>
-                </div><!-- /row -->
-            </div><!-- /container -->
-        </div>        
-        <!-- End Footer -->               
-
-        <!-- jQuery Plugins -->                                 
-        <script src="js/jquery-1.11.1.min.js"></script>                    
-        <script src="js/bootstrap.min.js"></script>
+        <a href="#" class="text-gray-700 hover:text-primary font-medium transition-colors">解决方案</a>
+        <a href="#" class="text-gray-700 hover:text-primary font-medium transition-colors">关于我们</a>
+        <a href="#" class="text-gray-700 hover:text-primary font-medium transition-colors">案例展示</a>
+        <a href="#" class="text-gray-700 hover:text-primary font-medium transition-colors">联系我们</a>
+      </nav>
+      
+      <!-- 移动端汉堡菜单按钮 -->
+      <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+        <i class="fa fa-bars text-xl"></i>
+      </button>
+    </div>
+    
+    <!-- 移动端导航菜单 -->
+    <div id="mobile-menu" class="md:hidden bg-white shadow-lg absolute w-full left-0 top-full transform -translate-y-full opacity-0 invisible transition-all duration-300">
+      <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+        <a href="#" class="text-gray-700 hover:text-primary py-2 border-b border-gray-100">首页</a>
         
-        <script src="js/slider/jquery.nivo.slider.pack.js"></script>   
-        <script src="js/slider/nivo-active.js"></script> 
+        <!-- 移动端产品中心下拉 -->
+        <div>
+          <button id="product-submenu-toggle" class="flex items-center justify-between w-full text-left text-gray-700 hover:text-primary py-2 border-b border-gray-100">
+            产品中心
+            <i class="fa fa-chevron-down text-xs"></i>
+          </button>
+          <div id="product-submenu" class="hidden pl-4 py-2 space-y-2 border-b border-gray-100">
+            <a href="#" class="block text-gray-700 hover:text-primary py-1">切割机</a>
+            <a href="#" class="block text-gray-700 hover:text-primary py-1">焊接机</a>
+            <a href="#" class="block text-gray-700 hover:text-primary py-1">打标机</a>
+          </div>
+        </div>
         
-        <script src="js/jquery.themepunch.tools.min.js"></script>   
-        <script src="js/jquery.themepunch.revolution.min.js"></script> 
-        <script src="js/jquery.cubeportfolio.min.js"></script>      
-        <script src="js/owl.carousel.js"></script>
-        <script src="js/moderniz.js"></script>    
-        <script src="js/jquery.sticky.js"></script>   
-        <script src="js/jquery.mmenu.min.js"></script>                     
-       <!--  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>      -->
-        <script src="js/app.js"></script>                               
-    </body>
+        <a href="#" class="text-gray-700 hover:text-primary py-2 border-b border-gray-100">解决方案</a>
+        <a href="#" class="text-gray-700 hover:text-primary py-2 border-b border-gray-100">关于我们</a>
+        <a href="#" class="text-gray-700 hover:text-primary py-2 border-b border-gray-100">案例展示</a>
+        <a href="#" class="text-gray-700 hover:text-primary py-2">联系我们</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero区（Banner图） -->
+  <section class="relative pt-[5vh] min-h-[50vh] md:min-h-[70vh] overflow-hidden">
+    <div id="hero-carousel" class="h-full relative">
+      <!-- 轮播图1 -->
+      <div class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-1000">
+        <div class="absolute inset-0 bg-black/30 z-10"></div>
+        <img src="https://picsum.photos/id/111/1920/1080" alt="激光设备工作场景，金属切割火花特写" class="w-full h-full object-cover">
+        <div class="absolute inset-0 z-20 flex items-center">
+          <div class="container mx-auto px-4 md:px-8 max-w-6xl">
+            <div class="text-white max-w-2xl">
+              <h1 class="text-[clamp(24px,5vw,32px)] font-bold mb-4 text-shadow-lg">Senrytech 专业激光设备制造商</h1>
+              <p class="text-[clamp(16px,3vw,18px)] mb-8 text-shadow">高精度·高稳定性·24/7工业级解决方案</p>
+              <div class="flex flex-wrap gap-4">
+                <a href="#" class="bg-secondary hover:bg-secondary/90 text-white font-medium px-6 py-3 rounded-md transition-colors shadow-lg">
+                  查看核心产品
+                </a>
+                <a href="#" class="bg-transparent border-2 border-white hover:bg-white/10 text-white font-medium px-6 py-3 rounded-md transition-colors">
+                  获取选型报价
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 轮播图2 -->
+      <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <div class="absolute inset-0 bg-black/30 z-10"></div>
+        <img src="https://picsum.photos/id/112/1920/1080" alt="激光设备整体外观及工厂应用环境" class="w-full h-full object-cover">
+        <div class="absolute inset-0 z-20 flex items-center">
+          <div class="container mx-auto px-4 md:px-8 max-w-6xl">
+            <div class="text-white max-w-2xl">
+              <h1 class="text-[clamp(24px,5vw,32px)] font-bold mb-4 text-shadow-lg">Senrytech 专业激光设备制造商</h1>
+              <p class="text-[clamp(16px,3vw,18px)] mb-8 text-shadow">高精度·高稳定性·24/7工业级解决方案</p>
+              <div class="flex flex-wrap gap-4">
+                <a href="#" class="bg-secondary hover:bg-secondary/90 text-white font-medium px-6 py-3 rounded-md transition-colors shadow-lg">
+                  查看核心产品
+                </a>
+                <a href="#" class="bg-transparent border-2 border-white hover:bg-white/10 text-white font-medium px-6 py-3 rounded-md transition-colors">
+                  获取选型报价
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 轮播指示器 -->
+    <div class="absolute bottom-6 left-0 right-0 z-30 flex justify-center space-x-2">
+      <button class="carousel-indicator w-3 h-3 rounded-full bg-white opacity-100"></button>
+      <button class="carousel-indicator w-3 h-3 rounded-full bg-white opacity-50"></button>
+    </div>
+  </section>
+
+  <!-- 核心优势区 -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- 优势1 -->
+        <div class="text-center p-6 hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fa fa-lightbulb-o text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">15年研发经验</h3>
+          <p class="text-gray-600">拥有100+项技术专利，核心技术团队平均行业经验8年以上</p>
+        </div>
+        
+        <!-- 优势2 -->
+        <div class="text-center p-6 hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fa fa-shield text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">24小时售后</h3>
+          <p class="text-gray-600">核心部件质保3年，全国30+服务网点，快速响应客户需求</p>
+        </div>
+        
+        <!-- 优势3 -->
+        <div class="text-center p-6 hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fa fa-line-chart text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">效率提升40%</h3>
+          <p class="text-gray-600">服务500+工厂企业，帮助客户平均提升生产效率40%以上</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 核心产品展示区 -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <!-- 标题栏 -->
+      <div class="mb-12">
+        <h2 class="text-[clamp(20px,4vw,22px)] font-bold mb-2">核心激光设备系列</h2>
+        <p class="text-gray-500">覆盖切割/焊接/打标全场景</p>
+      </div>
+      
+      <!-- 产品卡片网格 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- 产品卡片1 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+          <img src="https://picsum.photos/id/119/600/400" alt="SY-1540S 1500w光纤切板机" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-lg font-semibold mb-2">SY-1540S 1500w光纤切板机</h3>
+            <p class="text-gray-600 mb-4">适配不锈钢/铝，切割厚度≤30mm，高精度切割，效率出众</p>
+            <a href="#" class="inline-block text-primary border border-primary hover:bg-primary hover:text-white px-4 py-2 rounded transition-colors">
+              查看详情
+            </a>
+          </div>
+        </div>
+        
+        <!-- 产品卡片2 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+          <img src="https://picsum.photos/id/129/600/400" alt="SY-3000W 激光焊接机" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-lg font-semibold mb-2">SY-3000W 激光焊接机</h3>
+            <p class="text-gray-600 mb-4">适用于精密部件焊接，热影响区小，焊接强度高，美观度好</p>
+            <a href="#" class="inline-block text-primary border border-primary hover:bg-primary hover:text-white px-4 py-2 rounded transition-colors">
+              查看详情
+            </a>
+          </div>
+        </div>
+        
+        <!-- 产品卡片3 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+          <img src="https://picsum.photos/id/139/600/400" alt="SY-20W 光纤激光打标机" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-lg font-semibold mb-2">SY-20W 光纤激光打标机</h3>
+            <p class="text-gray-600 mb-4">高精度标记，速度快，适用于金属、塑料等多种材料表面标记</p>
+            <a href="#" class="inline-block text-primary border border-primary hover:bg-primary hover:text-white px-4 py-2 rounded transition-colors">
+              查看详情
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 查看全部按钮 -->
+      <div class="text-center mt-12">
+        <a href="#" class="inline-block bg-primary hover:bg-primary/90 text-white font-medium px-8 py-3 rounded-md transition-colors shadow">
+          查看全部产品
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 公司介绍/品牌背书区 -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
+        <!-- 左侧图片区 -->
+        <div class="md:col-span-2">
+          <img src="https://picsum.photos/id/175/800/600" alt="Senrytech工厂车间实拍" class="w-full h-auto rounded-lg shadow-md object-cover">
+        </div>
+        
+        <!-- 右侧文字区 -->
+        <div class="md:col-span-3">
+          <h2 class="text-[clamp(18px,3vw,20px)] font-bold mb-6">关于Senrytech</h2>
+          <ul class="space-y-4 text-gray-700">
+            <li class="flex items-start">
+              <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+              <span>成立于2008年，专注激光设备研发与制造15年，行业领先品牌</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+              <span>占地20000㎡现代化生产基地，年产能达1000+台各类激光设备</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+              <span>通过ISO9001质量管理体系认证，产品获得CE、FCC等多项国际认证</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+              <span>拥有50+人的专业研发团队，持续创新，保持技术领先优势</span>
+            </li>
+          </ul>
+          <div class="mt-8">
+            <a href="#" class="inline-block text-primary border border-primary hover:bg-primary hover:text-white px-6 py-2 rounded transition-colors">
+              了解更多
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 客户案例/评价区 -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <!-- 标题栏 -->
+      <div class="mb-12">
+        <h2 class="text-[clamp(20px,4vw,22px)] font-bold mb-2">客户合作案例</h2>
+        <p class="text-gray-500">从金属加工到航空航天，覆盖多行业</p>
+      </div>
+      
+      <!-- 案例轮播 -->
+      <div id="case-carousel" class="relative mb-16 overflow-hidden">
+        <div class="case-track flex transition-transform duration-500 ease-in-out">
+          <!-- 案例卡片1 -->
+          <div class="case-slide min-w-full md:min-w-[50%] p-4">
+            <div class="bg-white rounded-lg overflow-hidden shadow-md h-full">
+              <img src="https://picsum.photos/id/201/800/400" alt="XX汽车零部件厂激光切割应用场景" class="w-full h-48 object-cover">
+              <div class="p-6">
+                <h3 class="text-lg font-semibold mb-2">XX汽车零部件厂</h3>
+                <p class="text-gray-600">采用20000w激光切割方案，替代传统加工工艺，生产效率提升40%，材料利用率提高15%</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 案例卡片2 -->
+          <div class="case-slide min-w-full md:min-w-[50%] p-4">
+            <div class="bg-white rounded-lg overflow-hidden shadow-md h-full">
+              <img src="https://picsum.photos/id/202/800/400" alt="XX航空航天制造公司激光焊接应用" class="w-full h-48 object-cover">
+              <div class="p-6">
+                <h3 class="text-lg font-semibold mb-2">XX航空航天制造公司</h3>
+                <p class="text-gray-600">引入高精度激光焊接系统，满足航空级零部件焊接要求，产品合格率提升至99.8%</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 案例卡片3 -->
+          <div class="case-slide min-w-full md:min-w-[50%] p-4">
+            <div class="bg-white rounded-lg overflow-hidden shadow-md h-full">
+              <img src="https://picsum.photos/id/203/800/400" alt="XX电子科技公司激光打标应用" class="w-full h-48 object-cover">
+              <div class="p-6">
+                <h3 class="text-lg font-semibold mb-2">XX电子科技公司</h3>
+                <p class="text-gray-600">部署多台激光打标设备，实现电子产品追溯码高精度标记，生产效率提升30%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 轮播控制按钮 -->
+        <button id="case-prev" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white rounded-full flex items-center justify-center shadow-md z-10">
+          <i class="fa fa-chevron-left text-primary"></i>
+        </button>
+        <button id="case-next" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white rounded-full flex items-center justify-center shadow-md z-10">
+          <i class="fa fa-chevron-right text-primary"></i>
+        </button>
+        
+        <!-- 案例指示器 -->
+        <div class="flex justify-center space-x-2 mt-4">
+          <button class="case-indicator w-3 h-3 rounded-full bg-primary"></button>
+          <button class="case-indicator w-3 h-3 rounded-full bg-gray-300"></button>
+          <button class="case-indicator w-3 h-3 rounded-full bg-gray-300"></button>
+        </div>
+      </div>
+      
+      <!-- 客户评价 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- 评价1 -->
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <div class="text-primary text-2xl mb-4">"</div>
+          <p class="text-gray-700 mb-4">设备运行1年零故障，切割精度非常稳定，售后服务响应迅速，解决问题专业高效。</p>
+          <p class="text-gray-500 font-medium">—— XX重工 采购总监 王先生</p>
+        </div>
+        
+        <!-- 评价2 -->
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <div class="text-primary text-2xl mb-4">"</div>
+          <p class="text-gray-700 mb-4">更换Senrytech的激光焊接机后，我们的产品质量有了明显提升，客户投诉率下降了60%。</p>
+          <p class="text-gray-500 font-medium">—— XX精密制造 生产经理 李女士</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 行动召唤（CTA）区 -->
+  <section class="py-16 md:py-24 bg-dark text-white">
+    <div class="container mx-auto px-4 max-w-4xl text-center">
+      <h2 class="text-[clamp(20px,4vw,22px)] font-bold mb-4">想知道你的工厂适合哪款设备？</h2>
+      <p class="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">提供免费上门勘测+定制解决方案，专业团队为您推荐最适合的激光设备</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#" class="bg-secondary hover:bg-secondary/90 text-white font-medium px-8 py-3 rounded-md transition-colors shadow-lg text-lg">
+          免费获取选型方案
+        </a>
+        <a href="tel:400-XXX-XXXX" class="bg-transparent border-2 border-white hover:bg-white/10 text-white font-medium px-8 py-3 rounded-md transition-colors text-lg flex items-center justify-center">
+          <i class="fa fa-phone mr-2"></i> 拨打咨询热线：400-XXX-XXXX
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 博客/行业资讯区 -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <!-- 标题栏 -->
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
+        <div>
+          <h2 class="text-[clamp(20px,4vw,22px)] font-bold mb-2">激光行业资讯与技术干货</h2>
+        </div>
+        <a href="#" class="text-primary hover:text-primary/80 font-medium flex items-center mt-2 md:mt-0">
+          查看更多 <i class="fa fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+      
+      <!-- 文章卡片网格 -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- 文章卡片1 -->
+        <div class="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+          <h3 class="text-lg font-semibold mb-2 hover:text-primary transition-colors">
+            <a href="#">《激光切割机日常维护3步法》</a>
+          </h3>
+          <p class="text-gray-500 text-sm mb-3">2024-05-15</p>
+          <p class="text-gray-600">3个简单步骤，有效延长设备寿命，降低维护成本，提高生产效率。</p>
+        </div>
+        
+        <!-- 文章卡片2 -->
+        <div class="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+          <h3 class="text-lg font-semibold mb-2 hover:text-primary transition-colors">
+            <a href="#">《光纤激光技术最新发展趋势》</a>
+          </h3>
+          <p class="text-gray-500 text-sm mb-3">2024-04-28</p>
+          <p class="text-gray-600">解析激光技术最新突破，了解未来3年行业发展方向，提前布局技术升级。</p>
+        </div>
+        
+        <!-- 文章卡片3 -->
+        <div class="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+          <h3 class="text-lg font-semibold mb-2 hover:text-primary transition-colors">
+            <a href="#">《激光切割vs传统切割：成本效益分析》</a>
+          </h3>
+          <p class="text-gray-500 text-sm mb-3">2024-04-10</p>
+          <p class="text-gray-600">从初期投入到长期运营，全面对比两种切割工艺的成本与收益。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 底部固定区 -->
+  <footer class="bg-dark text-white pt-16 pb-8">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <!-- 快速导航 -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">快速导航</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">首页</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">产品中心</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">解决方案</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">关于我们</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">案例展示</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">联系我们</a></li>
+          </ul>
+        </div>
+        
+        <!-- 联系信息 -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">联系信息</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fa fa-map-marker text-gray-400 mt-1 mr-3"></i>
+              <span class="text-gray-300">济南市XX区XX街道XX号 激光产业园A座</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fa fa-phone text-gray-400 mr-3"></i>
+              <span class="text-gray-300">400-XXX-XXXX</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fa fa-envelope text-gray-400 mr-3"></i>
+              <span class="text-gray-300">info@senrytech.com</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fa fa-clock-o text-gray-400 mr-3"></i>
+              <span class="text-gray-300">周一至周日 8:00-22:00</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- 资质链接 -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">资质文件</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">营业执照</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">ISO9001认证</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">CE认证证书</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">FCC认证证书</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">隐私政策</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">服务条款</a></li>
+          </ul>
+        </div>
+        
+        <!-- 社交媒体 -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">关注我们</h3>
+          <div class="grid grid-cols-2 gap-4 mb-4">
+            <div class="bg-gray-800 p-3 rounded text-center">
+              <i class="fa fa-weixin text-2xl mb-2"></i>
+              <p class="text-sm text-gray-400">微信公众号</p>
+            </div>
+            <div class="bg-gray-800 p-3 rounded text-center">
+              <i class="fa fa-weibo text-2xl mb-2"></i>
+              <p class="text-sm text-gray-400">官方微博</p>
+            </div>
+            <div class="bg-gray-800 p-3 rounded text-center">
+              <i class="fa fa-youtube-play text-2xl mb-2"></i>
+              <p class="text-sm text-gray-400">YouTube</p>
+            </div>
+            <div class="bg-gray-800 p-3 rounded text-center">
+              <i class="fa fa-linkedin text-2xl mb-2"></i>
+              <p class="text-sm text-gray-400">LinkedIn</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 版权信息 -->
+      <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+        <p>©2024 Senrytech 激光设备制造有限公司 保留所有权利 | 鲁ICP备XXXXXXXX号</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // 移动端菜单切换
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    menuToggle.addEventListener('click', () => {
+      if (mobileMenu.classList.contains('invisible')) {
+        mobileMenu.classList.remove('invisible', 'opacity-0', '-translate-y-full');
+        mobileMenu.classList.add('visible', 'opacity-100', 'translate-y-0');
+        menuToggle.innerHTML = '<i class="fa fa-times text-xl"></i>';
+      } else {
+        mobileMenu.classList.add('invisible', 'opacity-0', '-translate-y-full');
+        mobileMenu.classList.remove('visible', 'opacity-100', 'translate-y-0');
+        menuToggle.innerHTML = '<i class="fa fa-bars text-xl"></i>';
+      }
+    });
+    
+    // 产品子菜单切换
+    const productSubmenuToggle = document.getElementById('product-submenu-toggle');
+    const productSubmenu = document.getElementById('product-submenu');
+    
+    productSubmenuToggle.addEventListener('click', () => {
+      productSubmenu.classList.toggle('hidden');
+      const icon = productSubmenuToggle.querySelector('i');
+      if (productSubmenu.classList.contains('hidden')) {
+        icon.classList.remove('fa-chevron-up');
+        icon.classList.add('fa-chevron-down');
+      } else {
+        icon.classList.remove('fa-chevron-down');
+        icon.classList.add('fa-chevron-up');
+      }
+    });
+    
+    // Hero区轮播
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    const carouselIndicators = document.querySelectorAll('.carousel-indicator');
+    let currentSlide = 0;
+    const slideInterval = 5000;
+    
+    function showSlide(index) {
+      heroSlides.forEach((slide, i) => {
+        slide.style.opacity = i === index ? '1' : '0';
+      });
+      
+      carouselIndicators.forEach((indicator, i) => {
+        indicator.style.opacity = i === index ? '1' : '0.5';
+      });
+      
+      currentSlide = index;
+    }
+    
+    function nextSlide() {
+      let newIndex = currentSlide + 1;
+      if (newIndex >= heroSlides.length) {
+        newIndex = 0;
+      }
+      showSlide(newIndex);
+    }
+    
+    // 设置轮播自动播放
+    let slideTimer = setInterval(nextSlide, slideInterval);
+    
+    // 点击指示器切换幻灯片
+    carouselIndicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => {
+        clearInterval(slideTimer);
+        showSlide(index);
+        slideTimer = setInterval(nextSlide, slideInterval);
+      });
+    });
+    
+    // 案例轮播
+    const caseTrack = document.querySelector('.case-track');
+    const caseSlides = document.querySelectorAll('.case-slide');
+    const caseIndicators = document.querySelectorAll('.case-indicator');
+    const casePrev = document.getElementById('case-prev');
+    const caseNext = document.getElementById('case-next');
+    let currentCase = 0;
+    const totalCases = caseSlides.length;
+    
+    function updateCasePosition() {
+      const slideWidth = 100; // 百分比
+      const slidesPerView = window.innerWidth >= 768 ? 2 : 1;
+      const maxIndex = totalCases - slidesPerView;
+      
+      // 确保索引在有效范围内
+      if (currentCase > maxIndex) {
+        currentCase = maxIndex;
+      }
+      
+      const offset = -currentCase * (slideWidth / slidesPerView);
+      caseTrack.style.transform = `translateX(${offset}%)`;
+      
+      // 更新指示器
+      caseIndicators.forEach((indicator, index) => {
+        if (index === currentCase) {
+          indicator.classList.remove('bg-gray-300');
+          indicator.classList.add('bg-primary');
+        } else {
+          indicator.classList.remove('bg-primary');
+          indicator.classList.add('bg-gray-300');
+        }
+      });
+    }
+    
+    caseNext.addEventListener('click', () => {
+      const slidesPerView = window.innerWidth >= 768 ? 2 : 1;
+      const maxIndex = totalCases - slidesPerView;
+      
+      if (currentCase < maxIndex) {
+        currentCase++;
+        updateCasePosition();
+      }
+    });
+    
+    casePrev.addEventListener('click', () => {
+      if (currentCase > 0) {
+        currentCase--;
+        updateCasePosition();
+      }
+    });
+    
+    // 点击案例指示器切换
+    caseIndicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => {
+        currentCase = index;
+        updateCasePosition();
+      });
+    });
+    
+    // 窗口大小变化时更新轮播
+    window.addEventListener('resize', updateCasePosition);
+    
+    // 滚动时导航栏样式变化
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.classList.add('shadow-md');
+        header.classList.remove('shadow-sm');
+      } else {
+        header.classList.remove('shadow-md');
+        header.classList.add('shadow-sm');
+      }
+    });
+    
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth'
+          });
+          
+          // 如果移动菜单是打开的，关闭它
+          if (!mobileMenu.classList.contains('invisible')) {
+            mobileMenu.classList.add('invisible', 'opacity-0', '-translate-y-full');
+            mobileMenu.classList.remove('visible', 'opacity-100', 'translate-y-0');
+            menuToggle.innerHTML = '<i class="fa fa-bars text-xl"></i>';
+          }
+        }
+      });
+    });
+  </script>
+</body>
 </html>
