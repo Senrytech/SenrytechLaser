@@ -1361,21 +1361,27 @@ const translations = {
 
 // 多语言切换功能实现
 document.addEventListener('DOMContentLoaded', function() {
-    // 获取所有语言按钮
+    // 获取所有语言按钮和相关元素
     const langButtons = document.querySelectorAll('.lang-btn');
     const currentLangElement = document.getElementById('current-lang');
+    const langDropdown = document.getElementById('lang-dropdown');
+    
+    // 语言选择器切换显示/隐藏
+    currentLangElement.addEventListener('click', function() {
+        langDropdown.classList.toggle('hidden');
+    });
+    
+    // 点击页面其他地方关闭语言选择器
+    document.addEventListener('click', function(event) {
+        if (!currentLangElement.contains(event.target) && !langDropdown.contains(event.target)) {
+            langDropdown.classList.add('hidden');
+        }
+    });
     
     // 语言切换函数
     function switchLanguage(lang) {
-        // 隐藏所有语言内容
-        document.querySelectorAll('[data-lang]').forEach(el => {
-            el.style.display = 'none';
-        });
-        
-        // 显示选中语言的内容
-        document.querySelectorAll(`[data-lang="${lang}"]`).forEach(el => {
-            el.style.display = '';
-        });
+        // 应用翻译内容
+        applyTranslations(lang);
         
         // 更新当前语言显示
         if (currentLangElement) {
@@ -1392,8 +1398,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         
-        // 应用翻译内容
-        applyTranslations(lang);
+        // 关闭语言选择器
+        langDropdown.classList.add('hidden');
         
         // 保存用户语言偏好到本地存储
         localStorage.setItem('preferredLang', lang);
@@ -1426,6 +1432,56 @@ document.addEventListener('DOMContentLoaded', function() {
             if (lang) {
                 switchLanguage(lang);
             }
+        });
+    });
+    
+    // 移动端菜单功能
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileProductsBtn = document.getElementById('mobile-products-btn');
+    const mobileProductsSubmenu = document.getElementById('mobile-products-submenu');
+    
+    mobileMenuBtn.addEventListener('click', function() {
+        if (mobileMenu.classList.contains('invisible')) {
+            mobileMenu.classList.remove('invisible', 'opacity-0', '-translate-y-full');
+            mobileMenu.classList.add('opacity-100', 'translate-y-0');
+            mobileMenuBtn.innerHTML = '<i class="fa fa-times text-xl"></i>';
+        } else {
+            mobileMenu.classList.add('invisible', 'opacity-0', '-translate-y-full');
+            mobileMenu.classList.remove('opacity-100', 'translate-y-0');
+            mobileMenuBtn.innerHTML = '<i class="fa fa-bars text-xl"></i>';
+        }
+    });
+    
+    mobileProductsBtn.addEventListener('click', function() {
+        mobileProductsSubmenu.classList.toggle('hidden');
+        const icon = this.querySelector('i');
+        if (mobileProductsSubmenu.classList.contains('hidden')) {
+            icon.classList.remove('fa-chevron-up');
+            icon.classList.add('fa-chevron-down');
+        } else {
+            icon.classList.remove('fa-chevron-down');
+            icon.classList.add('fa-chevron-up');
+        }
+    });
+    
+    // 返回顶部按钮功能
+    const backToTopBtn = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.remove('opacity-0', 'invisible');
+            backToTopBtn.classList.add('opacity-100', 'visible');
+        } else {
+            backToTopBtn.classList.add('opacity-0', 'invisible');
+            backToTopBtn.classList.remove('opacity-100', 'visible');
+        }
+    });
+    
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
     });
     
